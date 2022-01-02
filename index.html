@@ -1,0 +1,241 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>node-cron-expression</title>
+	<meta name="description" content="Documentation for node-cron-expression">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.json" data-base=".">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="index.html" class="title">node-cron-expression</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+							<input type="checkbox" id="tsd-filter-only-exported" />
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="globals.html">Globals</a>
+				</li>
+			</ul>
+			<h1>node-cron-expression</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div class="tsd-panel tsd-typography">
+				<a href="#node-cron-expression" id="node-cron-expression" style="color: inherit; text-decoration: none;">
+					<h1>node-cron-expression</h1>
+				</a>
+				<p><a href="https://github.com/merencia/node-cron-expression/blob/master/LICENSE.md"><img src="https://img.shields.io/npm/l/node-cron-expression.svg" alt="npm"></a>
+				<a href="https://img.shields.io/npm/v/node-cron-expression.svg"><img src="https://img.shields.io/npm/v/node-cron-expression.svg" alt="npm"></a></p>
+				<p><a href="./SS.png"><img src="./SS.png" alt="SS"></a></p>
+				<a href="#getting-started" id="getting-started" style="color: inherit; text-decoration: none;">
+					<h2>Getting Started</h2>
+				</a>
+				<p>Install <code>node-cron-expression</code> using npm:</p>
+				<pre><code class="language-console"><span class="hljs-meta">$</span><span class="bash"> npm install --save node-cron-expression</span>
+</code></pre>
+				<p>Import <code>node-cron-expression</code> and build an expression</p>
+				<pre><code class="language-javascript"><span class="hljs-keyword">const</span> { on, every } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;node-cron-expression&#x27;</span>);
+
+<span class="hljs-built_in">console</span>.log(on.dayOfTheWeek(<span class="hljs-number">6</span>)); <span class="hljs-comment">// 0 0 * * 6</span>
+<span class="hljs-built_in">console</span>.log(every.hour()); <span class="hljs-comment">// 0 * * * *</span>
+<span class="hljs-built_in">console</span>.log(every.hours(<span class="hljs-number">8</span>)); <span class="hljs-comment">// 0 */8 * * *</span>
+</code></pre>
+				<a href="#cron-syntax" id="cron-syntax" style="color: inherit; text-decoration: none;">
+					<h2>Cron Syntax</h2>
+				</a>
+				<p>...</p>
+				<a href="#basic-methods" id="basic-methods" style="color: inherit; text-decoration: none;">
+					<h2>Basic methods</h2>
+				</a>
+				<p>...</p>
+				<a href="#issues" id="issues" style="color: inherit; text-decoration: none;">
+					<h2>Issues</h2>
+				</a>
+				<p>Feel free to submit issues and enhancement requests <a href="https://github.com/kbariotis/node-cron-expression/issues">here</a>.</p>
+				<a href="#contributing" id="contributing" style="color: inherit; text-decoration: none;">
+					<h2>Contributing</h2>
+				</a>
+				<p>In general, we follow the &quot;fork-and-pull&quot; Git workflow.</p>
+				<ul>
+					<li>Fork the repo on GitHub;</li>
+					<li>Commit changes to a branch in your fork;</li>
+					<li>Pull request &quot;upstream&quot; with your changes;</li>
+				</ul>
+				<p>NOTE: Be sure to merge the latest from &quot;upstream&quot; before making a pull request!</p>
+				<p>Please do not contribute code you did not write yourself, unless you are certain you have the legal ability to do so. Also ensure all contributed code can be distributed under the ISC License.</p>
+				<a href="#license" id="license" style="color: inherit; text-decoration: none;">
+					<h2>License</h2>
+				</a>
+				<p>node-cron-expression is under <a href="./LICENSE">MIT License</a>.</p>
+			</div>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="globals.html"><em>Globals</em></a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-class">
+						<a href="classes/dayofthemonthexpression.html" class="tsd-kind-icon">Day<wbr>OfThe<wbr>Month<wbr>Expression</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/dayoftheweekexpression.html" class="tsd-kind-icon">Day<wbr>OfThe<wbr>Week<wbr>Expression</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/expression.html" class="tsd-kind-icon">Expression</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/hourexpression.html" class="tsd-kind-icon">Hour<wbr>Expression</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/minuteexpression.html" class="tsd-kind-icon">Minute<wbr>Expression</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/monthexpression.html" class="tsd-kind-icon">Month<wbr>Expression</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#atdayofthemonth" class="tsd-kind-icon">At<wbr>Day<wbr>OfThe<wbr>Month</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#atdayoftheweek" class="tsd-kind-icon">At<wbr>Day<wbr>OfThe<wbr>Week</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#athour" class="tsd-kind-icon">At<wbr>Hour</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#atminute" class="tsd-kind-icon">At<wbr>Minute</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#atmonth" class="tsd-kind-icon">At<wbr>Month</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#dayofthemonth" class="tsd-kind-icon">Day<wbr>OfThe<wbr>Month</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#dayoftheweek" class="tsd-kind-icon">Day<wbr>OfThe<wbr>Week</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#everydayofthemonth" class="tsd-kind-icon">Every<wbr>Day<wbr>OfThe<wbr>Month</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#everydayoftheweek" class="tsd-kind-icon">Every<wbr>Day<wbr>OfThe<wbr>Week</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#everyhour" class="tsd-kind-icon">Every<wbr>Hour</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#everyminute" class="tsd-kind-icon">Every<wbr>Minute</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#everymonth" class="tsd-kind-icon">Every<wbr>Month</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#hour" class="tsd-kind-icon">Hour</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#minute" class="tsd-kind-icon">Minute</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#month" class="tsd-kind-icon">Month</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#ondayofthemonth" class="tsd-kind-icon">On<wbr>Day<wbr>OfThe<wbr>Month</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#ondayoftheweek" class="tsd-kind-icon">On<wbr>Day<wbr>OfThe<wbr>Week</a>
+					</li>
+					<li class=" tsd-kind-function tsd-has-type-parameter">
+						<a href="globals.html#between" class="tsd-kind-icon">between</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#combine" class="tsd-kind-icon">combine</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#inmonth" class="tsd-kind-icon">in<wbr>Month</a>
+					</li>
+					<li class=" tsd-kind-object-literal">
+						<a href="globals.html#at" class="tsd-kind-icon">at</a>
+					</li>
+					<li class=" tsd-kind-object-literal">
+						<a href="globals.html#every" class="tsd-kind-icon">every</a>
+					</li>
+					<li class=" tsd-kind-object-literal">
+						<a href="globals.html#on" class="tsd-kind-icon">on</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
