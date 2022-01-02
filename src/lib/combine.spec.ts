@@ -1,6 +1,7 @@
 import { at } from './at';
 import { combine } from './combine';
 import { every } from './every';
+import { inMonth } from './inMonth';
 import { on } from './on';
 
 describe('combine', () => {
@@ -12,6 +13,17 @@ describe('combine', () => {
 
   it('should provide every day at midnight', () => {
     expect(combine(at.hour(0), at.minute(0)).toString()).toBe('0 0 * * *');
+  });
+
+  it('should provide every Thursday at midnight in July', () => {
+    expect(
+      combine(
+        on.dayOfTheWeek(5),
+        at.hour(0),
+        inMonth(7),
+        at.minute(0)
+      ).toString()
+    ).toBe('0 0 * 7 5');
   });
 
   it('should provide every day at 2am', () => {
