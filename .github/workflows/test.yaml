@@ -1,10 +1,10 @@
-name: PR
+name: Test
 on:
   pull_request:
 
 jobs:
-  release:
-    name: PR
+  test:
+    name: Test
     runs-on: ubuntu-18.04
     steps:
       - name: Checkout
