@@ -4,7 +4,7 @@ import { every } from './every';
 import { on } from './on';
 
 describe('combine', () => {
-  it('every hour at 30 minutes', () => {
+  it('should provide every hour at 30 minutes', () => {
     expect(
       combine(
         every.dayOfTheWeek(),
@@ -16,7 +16,7 @@ describe('combine', () => {
     ).toBe('30 */2 * * *');
   });
 
-  it('every day at midnight', () => {
+  it('should provide every day at midnight', () => {
     expect(
       combine(
         every.dayOfTheWeek(),
@@ -28,7 +28,7 @@ describe('combine', () => {
     ).toBe('0 0 * * *');
   });
 
-  it('every day at 2am', () => {
+  it('should provide every day at 2am', () => {
     expect(
       combine(
         every.dayOfTheWeek(),
@@ -40,7 +40,7 @@ describe('combine', () => {
     ).toBe('0 2 * * *');
   });
 
-  it('every sunday at 2am', () => {
+  it('should provide every sunday at 2am', () => {
     expect(
       combine(
         on.dayOfTheWeek(6),

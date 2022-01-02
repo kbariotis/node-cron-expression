@@ -1,47 +1,47 @@
 import { every } from './every';
 
 describe('every', () => {
-  it('every minute', () => {
+  it('should provide every minute', () => {
     expect(every.minute().toString()).toBe('* * * * *');
   });
 
-  it('every 2 minutes', () => {
+  it('should provide every 2 minutes', () => {
     expect(every.minutes(2).toString()).toBe('*/2 * * * *');
   });
 
-  it('every even minute', () => {
+  it('should provide every even minute', () => {
     expect(every.minutes(2).toString()).toBe('*/2 * * * *');
   });
 
-  it('every 5 minutes', () => {
+  it('should provide every 5 minutes', () => {
     expect(every.minutes(5).toString()).toBe('*/5 * * * *');
   });
 
-  it('every quarter hour', () => {
+  it('should provide every quarter hour', () => {
     expect(every.minutes(15).toString()).toBe('*/15 * * * *');
   });
 
-  it('every half hour', () => {
+  it('should provide every half hour', () => {
     expect(every.minutes(30).toString()).toBe('*/30 * * * *');
   });
 
-  it('every hour', () => {
+  it('should provide every hour', () => {
     expect(every.hour().toString()).toBe('0 * * * *');
   });
 
-  it('every 1 hour', () => {
+  it('should provide every 1 hour', () => {
     expect(every.hours(1).toString()).toBe('0 */1 * * *');
   });
 
-  it('every 2 hours', () => {
+  it('should provide every 2 hours', () => {
     expect(every.hours(2).toString()).toBe('0 */2 * * *');
   });
 
-  it('every day', () => {
+  it('should provide every day', () => {
     expect(every.dayOfTheWeek().toString()).toBe('0 0 * * *');
   });
 
-  it('every sunday', () => {
+  it('should provide every sunday', () => {
     expect(every.dayOfTheWeek(6).toString()).toBe('0 0 * * */6');
   });
 });
