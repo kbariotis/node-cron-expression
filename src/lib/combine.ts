@@ -8,13 +8,13 @@ import {
 } from './expression';
 
 function combine(
-  ...expressions: [
-    DayOfTheWeekExpression,
-    MonthExpression,
-    DayOfTheMonthExpression,
-    HourExpression,
-    MinuteExpression
-  ]
+  ...expressions: Array<
+    | DayOfTheWeekExpression
+    | MonthExpression
+    | DayOfTheMonthExpression
+    | HourExpression
+    | MinuteExpression
+  >
 ) {
   return expressions.reduce((initial, current) => {
     if (current instanceof MinuteExpression) {
