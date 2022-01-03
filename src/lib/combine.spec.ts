@@ -1,54 +1,38 @@
 import { at } from './at';
 import { combine } from './combine';
 import { every } from './every';
+import { inMonth } from './inMonth';
 import { on } from './on';
 
 describe('combine', () => {
-  it('every hour at 30 minutes', () => {
-    expect(
-      combine(
-        every.dayOfTheWeek(),
-        every.month(),
-        every.dayOfTheMonth(),
-        every.hours(2),
-        at.minute(30)
-      ).toString()
-    ).toBe('30 */2 * * *');
+  it('should provide every hour at 30 minutes', () => {
+    expect(combine(every.hours(2), at.minute(30)).toString()).toBe(
+      '30 */2 * * *'
+    );
   });
 
-  it('every day at midnight', () => {
+  it('should provide every day at midnight', () => {
+    expect(combine(at.hour(0), at.minute(0)).toString()).toBe('0 0 * * *');
+  });
+
+  it('should provide every Thursday at midnight in July', () => {
     expect(
       combine(
-        every.dayOfTheWeek(),
-        every.month(),
-        every.dayOfTheMonth(),
+        on.dayOfTheWeek(5),
         at.hour(0),
+        inMonth(7),
         at.minute(0)
       ).toString()
-    ).toBe('0 0 * * *');
+    ).toBe('0 0 * 7 5');
   });
 
-  it('every day at 2am', () => {
-    expect(
-      combine(
-        every.dayOfTheWeek(),
-        every.month(),
-        every.dayOfTheMonth(),
-        at.hour(2),
-        at.minute(0)
-      ).toString()
-    ).toBe('0 2 * * *');
+  it('should provide every day at 2am', () => {
+    expect(combine(at.hour(2), at.minute(0)).toString()).toBe('0 2 * * *');
   });
 
-  it('every sunday at 2am', () => {
+  it('should provide every sunday at 2am', () => {
     expect(
-      combine(
-        on.dayOfTheWeek(6),
-        every.month(),
-        every.dayOfTheMonth(),
-        at.hour(2),
-        at.minute(0)
-      ).toString()
+      combine(on.dayOfTheWeek(6), at.hour(2), at.minute(0)).toString()
     ).toBe('0 2 * * 6');
   });
 });
