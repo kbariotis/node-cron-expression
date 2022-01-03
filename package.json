@@ -1,6 +1,6 @@
 {
   "name": "node-cron-expression",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "description": "Declarative functional crontab expression builder",
   "main": "build/main/index.js",
