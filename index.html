@@ -69,6 +69,7 @@
 				</a>
 				<p><a href="https://github.com/merencia/node-cron-expression/blob/master/LICENSE.md"><img src="https://img.shields.io/npm/l/node-cron-expression.svg" alt="npm"></a>
 				<a href="https://img.shields.io/npm/v/node-cron-expression.svg"><img src="https://img.shields.io/npm/v/node-cron-expression.svg" alt="npm"></a></p>
+				<p><strong>Declarative functional cron expression builder. Use it with tools like <a href="https://github.com/node-cron/node-cron">node-cron</a> or <a href="https://github.com/OptimalBits/bull">bull</a></strong></p>
 				<p><a href="./SS.png"><img src="./SS.png" alt="SS"></a></p>
 				<a href="#getting-started" id="getting-started" style="color: inherit; text-decoration: none;">
 					<h2>Getting Started</h2>
@@ -77,20 +78,16 @@
 				<pre><code class="language-console"><span class="hljs-meta">$</span><span class="bash"> npm install --save node-cron-expression</span>
 </code></pre>
 				<p>Import <code>node-cron-expression</code> and build an expression</p>
-				<pre><code class="language-javascript"><span class="hljs-keyword">const</span> { on, every } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;node-cron-expression&#x27;</span>);
+				<pre><code class="language-javascript"><span class="hljs-keyword">const</span> { onDayOfTheWeek, every, everyHour } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;node-cron-expression&#x27;</span>);
 
-<span class="hljs-built_in">console</span>.log(on.dayOfTheWeek(<span class="hljs-number">6</span>)); <span class="hljs-comment">// 0 0 * * 6</span>
-<span class="hljs-built_in">console</span>.log(every.hour()); <span class="hljs-comment">// 0 * * * *</span>
-<span class="hljs-built_in">console</span>.log(every.hours(<span class="hljs-number">8</span>)); <span class="hljs-comment">// 0 */8 * * *</span>
+<span class="hljs-built_in">console</span>.log(onDayOfTheWeek(<span class="hljs-number">6</span>)); <span class="hljs-comment">// 0 0 * * 6</span>
+<span class="hljs-built_in">console</span>.log(everyHour()); <span class="hljs-comment">// 0 * * * *</span>
+<span class="hljs-built_in">console</span>.log(every(<span class="hljs-number">8</span>).hours()); <span class="hljs-comment">// 0 */8 * * *</span>
 </code></pre>
-				<a href="#cron-syntax" id="cron-syntax" style="color: inherit; text-decoration: none;">
-					<h2>Cron Syntax</h2>
+				<a href="#documentation" id="documentation" style="color: inherit; text-decoration: none;">
+					<h2>Documentation</h2>
 				</a>
-				<p>...</p>
-				<a href="#basic-methods" id="basic-methods" style="color: inherit; text-decoration: none;">
-					<h2>Basic methods</h2>
-				</a>
-				<p>...</p>
+				<p>Find all available methods with examples <a href="https://kbariotis.github.io/node-cron-expression">here</a>.</p>
 				<a href="#issues" id="issues" style="color: inherit; text-decoration: none;">
 					<h2>Issues</h2>
 				</a>
