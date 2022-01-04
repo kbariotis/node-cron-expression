@@ -36,12 +36,4 @@ describe('every', () => {
   it('should provide every 2 hours', () => {
     expect(every.hours(2).toString()).toBe('0 */2 * * *');
   });
-
-  it('should provide every day', () => {
-    expect(every.dayOfTheWeek().toString()).toBe('0 0 * * *');
-  });
-
-  it('should provide every sunday', () => {
-    expect(every.dayOfTheWeek(6).toString()).toBe('0 0 * * */6');
-  });
 });

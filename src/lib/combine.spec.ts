@@ -35,4 +35,25 @@ describe('combine', () => {
       combine(on.dayOfTheWeek(6), at.hour(2), at.minute(0)).toString()
     ).toBe('0 2 * * 6');
   });
+
+  it('should combine different functions with different order', () => {
+    const expectedValue = '32 2 15 * 6';
+    expect(
+      combine(
+        on.dayOfTheWeek(6),
+        on.dayOfTheMonth(15),
+        at.hour(2),
+        at.minute(32)
+      ).toString()
+    ).toBe(expectedValue);
+
+    expect(
+      combine(
+        at.hour(2),
+        at.minute(32),
+        on.dayOfTheMonth(15),
+        on.dayOfTheWeek(6)
+      ).toString()
+    ).toBe(expectedValue);
+  });
 });
