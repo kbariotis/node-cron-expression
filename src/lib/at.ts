@@ -3,7 +3,7 @@ import { HourExpression, MinuteExpression } from './expression';
 /**
  * Set to run in a specific minute
  *
- * ``` JS
+ * ```
  * atMinute(2); // 2 * * * *
  * ```
  */
@@ -17,7 +17,7 @@ export const atMinute = (minute: Minute | Minute[]) => {
  * Set to run in a specific hour. Defaults to the first minute
  * of that hour
  *
- * ```JS
+ * ```
  * atHour(3); // 0 3 * * *
  * ```
  */

@@ -3,7 +3,7 @@ import { MonthExpression } from './expression';
 /**
  * In specific month or multiple specific months
  *
- * ```JS
+ * ```
  * inMonth(3); // * * * 3 *
  * ```
  *

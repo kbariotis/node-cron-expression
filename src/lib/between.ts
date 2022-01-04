@@ -11,7 +11,7 @@ import {
  * Provide two time points of the same type
  * to create a range
  *
- * ```JS
+ * ```
  * between(atMinute(2), atMinute(20)); // 2-20 * * * *
  * ```
  *
