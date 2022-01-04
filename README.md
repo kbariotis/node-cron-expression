@@ -5,7 +5,7 @@
 
 **Declarative functional cron expression builder. Use it with tools like [node-cron](https://github.com/node-cron/node-cron) or [bull](https://github.com/OptimalBits/bull)**
 
-[![SS](./SS.png)](./SS.png)
+![Screenshot of node-cron-expression](https://raw.githubusercontent.com/kbariotis/node-cron-expression/main/SS.png)
 
 ## Getting Started
 
