@@ -7,6 +7,14 @@ import {
   MonthExpression,
 } from './expression';
 
+/**
+ * Provide two time points of the same type
+ * to create a range
+ *
+ * @example
+ * between(atMinute(2), atMinute(20)); // 2-20 * * * *
+ *
+ */
 export function between<T extends Expression>(
   startExpression: T,
   endExpression: T

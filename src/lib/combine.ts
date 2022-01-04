@@ -7,6 +7,12 @@ import {
   MonthExpression,
 } from './expression';
 
+/**
+ * Combine different time points
+ *
+ * @example
+ * combine(atMinute(30), between(atHour(2), atHour(4))); // 30 2-4 * * *
+ */
 function combine(
   ...expressions: Array<
     | DayOfTheWeekExpression
