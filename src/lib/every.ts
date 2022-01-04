@@ -8,8 +8,9 @@ import {
 /**
  * Every single minute or every X minute after current date time
  *
- * @example
+ * ```JS
  * everyMinute(3); // *\/3 * * * *
+ * ```
  */
 export const everyMinute = (minute?: Minute) => {
   return new MinuteExpression({
@@ -21,8 +22,9 @@ export const everyMinute = (minute?: Minute) => {
  * Every single hour or every X hours after current date time. Defaults
  * to the first minute of that hour.
  *
- * @example
+ * ```JS
  * everyHour(3); // 0 *\/3 * * *
+ * ```
  */
 export const everyHour = (hour?: Hour) => {
   return new HourExpression({
@@ -35,8 +37,9 @@ export const everyHour = (hour?: Hour) => {
  * Every single month or every X months after current date time. Defaults
  * to the first minute, first hour and first day of the month.
  *
- * @example
+ * ```JS
  * everyHour(3); // 0 *\/3 * * *
+ * ```
  */
 export const everyMonth = (month?: Month) => {
   return new MonthExpression({
@@ -51,8 +54,9 @@ export const everyMonth = (month?: Month) => {
  * Every single month or every X months after current date time. Defaults
  * to the first minute, first hour and first day of the month.
  *
- * @example
+ * ```JS
  * everyHour(3); // 0 *\/3 * * *
+ * ```
  */
 export const every = (input: number) => {
   return {

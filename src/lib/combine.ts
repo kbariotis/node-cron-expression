@@ -10,8 +10,9 @@ import {
 /**
  * Combine different time points
  *
- * @example
+ * ```JS
  * combine(atMinute(30), between(atHour(2), atHour(4))); // 30 2-4 * * *
+ * ```
  */
 function combine(
   ...expressions: Array<

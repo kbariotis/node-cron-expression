@@ -11,8 +11,9 @@ import {
  * Provide two time points of the same type
  * to create a range
  *
- * @example
+ * ```JS
  * between(atMinute(2), atMinute(20)); // 2-20 * * * *
+ * ```
  *
  */
 export function between<T extends Expression>(

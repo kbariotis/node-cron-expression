@@ -3,8 +3,10 @@ import { MonthExpression } from './expression';
 /**
  * In specific month or multiple specific months
  *
- * @example
+ * ```JS
  * inMonth(3); // * * * 3 *
+ * ```
+ *
  */
 export const inMonth = (month: Month | Month[]) => {
   return new MonthExpression({
