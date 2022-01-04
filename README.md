@@ -3,6 +3,8 @@
 [![npm](https://img.shields.io/npm/l/node-cron-expression.svg)](https://github.com/merencia/node-cron-expression/blob/master/LICENSE.md)
 [![npm](https://img.shields.io/npm/v/node-cron-expression.svg)](https://img.shields.io/npm/v/node-cron-expression.svg)
 
+**Declarative functional cron expression builder. Use it with tools like [node-cron](https://github.com/node-cron/node-cron) or [bull](https://github.com/OptimalBits/bull)**
+
 [![SS](./SS.png)](./SS.png)
 
 ## Getting Started
@@ -16,20 +18,16 @@ $ npm install --save node-cron-expression
 Import `node-cron-expression` and build an expression
 
 ```javascript
-const { on, every } = require('node-cron-expression');
+const { onDayOfTheWeek, every, everyHour } = require('node-cron-expression');
 
-console.log(on.dayOfTheWeek(6)); // 0 0 * * 6
-console.log(every.hour()); // 0 * * * *
-console.log(every.hours(8)); // 0 */8 * * *
+console.log(onDayOfTheWeek(6)); // 0 0 * * 6
+console.log(everyHour()); // 0 * * * *
+console.log(every(8).hours()); // 0 */8 * * *
 ```
 
-## Cron Syntax
+## Documentation
 
-...
-
-## Basic methods
-
-...
+Find all available methods with examples [here](https://kbariotis.github.io/node-cron-expression).
 
 ## Issues
 
