@@ -1,3 +1,10 @@
+/**
+ * Create an expression with default values. Every value defaults to `*`.
+ *
+ * ```
+ * const expression = new Expression({hour: '1'}); // * 1 * * *
+ * ```
+ */
 export class Expression {
   private minute: string;
   private hour: string;
@@ -56,8 +63,27 @@ export class Expression {
   }
 }
 
+/**
+ * Alias of Expression to infer the return type
+ */
 export class MinuteExpression extends Expression {}
+
+/**
+ * Alias of Expression to infer the return type
+ */
 export class HourExpression extends Expression {}
+
+/**
+ * Alias of Expression to infer the return type
+ */
 export class DayOfTheMonthExpression extends Expression {}
+
+/**
+ * Alias of Expression to infer the return type
+ */
 export class MonthExpression extends Expression {}
+
+/**
+ * Alias of Expression to infer the return type
+ */
 export class DayOfTheWeekExpression extends Expression {}
