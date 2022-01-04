@@ -1,9 +1,8 @@
 import { DayOfTheMonthExpression, DayOfTheWeekExpression } from './expression';
 
-type OnDayOfTheMonth = DayOfTheMonth | DayOfTheMonth[];
-type OnDayOfTheWeek = DayOfTheWeek | DayOfTheWeek[];
-
-export const onDayOfTheMonth = (dayOfTheMonth: OnDayOfTheMonth) => {
+export const onDayOfTheMonth = (
+  dayOfTheMonth: DayOfTheMonth | DayOfTheMonth[]
+) => {
   return new DayOfTheMonthExpression({
     minute: '0',
     hour: '0',
@@ -13,7 +12,7 @@ export const onDayOfTheMonth = (dayOfTheMonth: OnDayOfTheMonth) => {
   });
 };
 
-export const onDayOfTheWeek = (dayOfTheWeek: OnDayOfTheWeek) => {
+export const onDayOfTheWeek = (dayOfTheWeek: DayOfTheWeek | DayOfTheWeek[]) => {
   return new DayOfTheWeekExpression({
     minute: '0',
     hour: '0',
