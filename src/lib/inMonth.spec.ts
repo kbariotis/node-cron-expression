@@ -8,4 +8,8 @@ describe('inMonth', () => {
   it('should provide in January and December', () => {
     expect(inMonth([1, 12]).toString()).toBe('* * * 1,12 *');
   });
+
+  it('should provide in January and December using literals', () => {
+    expect(inMonth(['January', 'December']).toString()).toBe('* * * 1,12 *');
+  });
 });

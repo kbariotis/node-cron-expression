@@ -90,6 +90,20 @@ type Hour =
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 type Month = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+type MonthLiteral =
+  | 'January'
+  | 'February'
+  | 'March'
+  | 'April'
+  | 'May'
+  | 'June'
+  | 'July'
+  | 'August'
+  | 'September'
+  | 'October'
+  | 'November'
+  | 'December';
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 type DayOfTheMonth =
