@@ -140,4 +140,13 @@ type DayOfTheMonth =
   | 31;
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-type DayOfTheWeek = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7;
+type DayOfTheWeek = 0 | 1 | 2 | 3 | 4 | 5 | 6;
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+type DayOfTheWeekLiteral =
+  | 'Monday'
+  | 'Tuesday'
+  | 'Wednesday'
+  | 'Thursday'
+  | 'Friday'
+  | 'Saturday'
+  | 'Sunday';
