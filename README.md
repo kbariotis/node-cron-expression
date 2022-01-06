@@ -20,9 +20,9 @@ Import `node-cron-expression` and build an expression
 ```javascript
 const { onDayOfTheWeek, every, everyHour } = require('node-cron-expression');
 
-console.log(onDayOfTheWeek(6)); // 0 0 * * 6
-console.log(everyHour()); // 0 * * * *
-console.log(every(8).hours()); // 0 */8 * * *
+console.log(onDayOfTheWeek(6).toString()); // 0 0 * * 6
+console.log(everyHour().toString()); // 0 * * * *
+console.log(every(8).hours().toString()); // 0 */8 * * *
 ```
 
 ## Documentation
