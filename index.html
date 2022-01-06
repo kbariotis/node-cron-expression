@@ -80,9 +80,9 @@
 				<p>Import <code>node-cron-expression</code> and build an expression</p>
 				<pre><code class="language-javascript"><span class="hljs-keyword">const</span> { onDayOfTheWeek, every, everyHour } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;node-cron-expression&#x27;</span>);
 
-<span class="hljs-built_in">console</span>.log(onDayOfTheWeek(<span class="hljs-number">6</span>)); <span class="hljs-comment">// 0 0 * * 6</span>
-<span class="hljs-built_in">console</span>.log(everyHour()); <span class="hljs-comment">// 0 * * * *</span>
-<span class="hljs-built_in">console</span>.log(every(<span class="hljs-number">8</span>).hours()); <span class="hljs-comment">// 0 */8 * * *</span>
+<span class="hljs-built_in">console</span>.log(onDayOfTheWeek(<span class="hljs-number">6</span>).toString()); <span class="hljs-comment">// 0 0 * * 6</span>
+<span class="hljs-built_in">console</span>.log(everyHour().toString()); <span class="hljs-comment">// 0 * * * *</span>
+<span class="hljs-built_in">console</span>.log(every(<span class="hljs-number">8</span>).hours().toString()); <span class="hljs-comment">// 0 */8 * * *</span>
 </code></pre>
 				<a href="#documentation" id="documentation" style="color: inherit; text-decoration: none;">
 					<h2>Documentation</h2>
