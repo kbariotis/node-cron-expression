@@ -51,11 +51,12 @@ export const everyMonth = (month?: Month) => {
 };
 
 /**
- * Every single month or every X months after current date time. Defaults
- * to the first minute, first hour and first day of the month.
+ * Every X time point
  *
  * ```
- * everyHour(3); // 0 *\/3 * * *
+ * every(3).minutes(); // *\/3 * * *
+ * every(3).hours(); // 0 *\/3 * * *
+ * every(3).months(); // 0 0 1 *\/3 *
  * ```
  */
 export const every = (input: number) => {
